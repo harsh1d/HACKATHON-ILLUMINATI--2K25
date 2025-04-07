@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #2980b9;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .case-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .case-status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status-open {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .status-in-progress {
+            background-color: #f1c40f;
+            color: white;
+        }
+
+        .status-closed {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .case-title {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .case-details {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .case-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .case-actions button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-edit {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .create-case {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .create-case:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Case Management System</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search cases...">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <div class="case-grid">
+            <!-- Sample Case 1 -->
+            <div class="case-card">
+                <span class="case-status status-open">Open</span>
+                <h2 class="case-title">Customer Support Issue #1234</h2>
+                <p class="case-details">
+                    Reported by: Yash Patel <br>
+                    Created: 2024-02-22<br>
+                    Priority: High
+                </p>
+                <div class="case-actions">
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <!-- Sample Case 2 -->
+            <div class="case-card">
+                <span class="case-status status-in-progress">In Progress</span>
+                <h2 class="case-title">Technical Issue #5678</h2>
+                <p class="case-details">
+                    Reported by: Prit Smith<br>
+                    Created: 2024-02-21<br>
+                    Priority: Medium
+                </p>
+                <div class="case-actions">
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+
+            <!-- Sample Case 3 -->
+            <div class="case-card">
+                <span class="case-status status-closed">Closed</span>
+                <h2 class="case-title">Billing Inquiry #9012</h2>
+                <p class="case-details">
+                    Reported by: Purva Sharma<br>
+                    Created: 2024-02-20<br>
+                    Priority: Low
+                </p>
+                <div class="case-actions">
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </div>
+            </div>
+        </div>
