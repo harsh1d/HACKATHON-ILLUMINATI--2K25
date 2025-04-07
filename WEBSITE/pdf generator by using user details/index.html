@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details to PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+.orange {
+  color: #caf438;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 80px;
+  background-color: #001925;
+  padding: 30px;
+  border-left: 5px solid #caf438;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+}
+
+.heading {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.c1 {
+  display: block;
+  color: #d3f35f;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.c2 {
+  display: block;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-container .form .input {
+  color: #87a4b6;
+  width: 100%;
+  background-color: #002733;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid transparent;
+}
+.form-container .form .input1{
+ color: #87a4b6;
+  width: 103%;
+  background-color: #002733;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid transparent;   
+}
+
+.form-container .form .input:focus {
+  border-left: 5px solid #caf438;
+}
+
+.form-container .form .textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #013747;
+  color: #caf438;
+  font-weight: bold;
+  resize: none;
+  max-height: 150px;
+  margin-bottom: 20px;
+  border-left: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+  border-left: 5px solid #caf438;
+}
+
+.form-container .form .button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+  flex-basis: 70%;
+  background: #caf438;
+  padding: 10px;
+  color: #001925;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .send-button:hover {
+  background: transparent;
+  border: 1px solid #ff7a01;
+  color: #caf438;
+}
+
+.form-container .form .button-container .reset-button-container {
+  filter: drop-shadow(1px 1px 0px #ff7a01);
+  flex-basis: 10%;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: #caf438;
+  font-weight: bold;
+  background: #001925;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container
+  .form
+  .button-container
+  .reset-button-container
+  .reset-button:hover {
+  background: #caf438;
+  color: #001925;
+}
+
+    </style>
+</head>
+
+<body style="background: none;">
+    <video autoplay muted loop id="background-video" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;">
+        <source src="Papers_Conference_Room.mp4" type="video/mp4">
+    </video></body>
+    
+<div class="form-container">
+    <div class="form">
+        <span class="heading">User Details Form</span>
+        <span class="c1"></span>
+        <input type="text" class="input" id="name" placeholder="Name" required><br><br>
+
+        <input type="email" class="input" id="email" placeholder="Email" required><br><br>
+
+        <input type="tel" class="input" id="phone" placeholder="Phone Number" required><br><br>
+
+        <select id="caseType" class="input1" required>
+            <option value="">Select a case type</option>
+            <option value="civil">Civil</option>
+            <option value="criminal">Criminal</option>
+            <option value="family">Family</option>
+            <option value="labor">Labor</option>
+        </select><br><br>
+
+        <!-- <label for="caseType">Case Type:</label><br>
+        <select id="caseType" class="input" placeholder="Case Type"  required></select>
+            <option value="">Select a case type</option>
+            <option value="civil">Civil</option>
+            <option value="criminal">Criminal</option>
+            <option value="family">Family</option>
+            <option value="labor">Labor</option>
+        </select><br><br> -->
+
+        <div class="button-container">
+            <button type="submit" class="send-button">Submit</button>
+            <div class="reset-button-container"></div>
+            <button type="reset" class="reset-button" id="reset-btn" onclick="window.location.href='home.html'"><b>Go back</b></button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.querySelector(".send-button").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get user input values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const caseType = document.getElementById("caseType").value; // Get case type
+
+            // Check if all fields are filled
+            if (!name || !email || !phone || !caseType) {
+                alert("Please fill all the fields.");
+                return;
+            }
+
+            // Create a new jsPDF instance
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add user details to the PDF
+            doc.text(`Name: ${name}`, 10, 10);
+            doc.text(`Email: ${email}`, 10, 20);
+            doc.text(`Phone: ${phone}`, 10, 30);
+            doc.text(`Case Type: ${caseType}`, 10, 40); // Add case type
+
+            // Save the PDF and trigger download
+            doc.save("Fir-reg-form.pdf");
+        });
+    </script>
+</body>
+
+</html>
