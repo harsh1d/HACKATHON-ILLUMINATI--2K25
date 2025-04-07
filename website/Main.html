@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIRE YOUR LAWYER</title>
+    <link rel="stylesheet" href="https://fonts.google.com/noto/specimen/Noto+Serif?preview.text=Services&categoryFilters=Feeling:%2FExpressive%2FBusiness">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0 20px;
+            color: #ff4500;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #575757;
+        }
+
+        .hero {
+            background: url('Mainpicture.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #333;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .hero-card {
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            justify-content: center;
+            margin-left: 300px;
+            margin-top: 400px;
+        }
+
+        .hero-card h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hero-card p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .accent-line {
+            width: 50px;
+            height: 4px;
+            background-color: #ff4500;
+            margin: 10px auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+
+            .hero-card {
+                padding: 15px 20px;
+                max-width: 80%;
+            }
+
+            .hero-card h1 {
+                font-size: 2rem;
+            }
+
+            .hero-card p {
+                font-size: 1rem;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 3rem;
+            color: #000000;
+            -webkit-text-stroke: 1px white;
+        }
+        .section-title1 {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 3rem;
+            color: #000000;
+            -webkit-text-stroke: 1px white;
+            font-family: noto-serif;
+        }
+
+        .about {
+            padding: 40px 20px;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 900px;
+        }
+
+        .about-content {
+            position: relative;
+            max-width: 1200px;
+            width: 100%;
+            height: 300px;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 100%;
+            left: 30%;
+            transform: translate(-60%, -50%);
+            max-width: 500px;
+            max-height: 900px;
+            width: 90%;
+            height: 150%;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .about-card h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .about-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            background: url('top.jpg') no-repeat center center/cover;
+            border-radius: 15px;
+            z-index: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .accent-line {
+            width: 50px;
+            height: 4px;
+            background-color: #ff4500;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                height: 250px;
+            }
+
+            .about-card {
+                position: static;
+                transform: none;
+                max-width: 90%;
+                width: 100%;
+                margin: 0 auto;
+                padding: 15px 20px;
+            }
+
+            .about-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-card p {
+                font-size: 0.9rem;
+            }
+
+            .about-content::before {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .rights {
+            background: url('Lawyer.jpg') ;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding: 40px 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+        }
+
+        .rights-content {
+            position: relative;
+            max-width: 1200px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rights-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('lady-justice.jpg') no-repeat center center/cover;
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .rights-card {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 6%;
+            transform: translate(0, -50%);
+            max-width: 400px;
+            width: 90%;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .rights-card h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .rights-card p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .accent-line {
+            width: 50px;
+            height: 4px;
+            background-color: #ff4500;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .rights {
+                height: 250px;
+                padding: 20px 10px;
+            }
+
+            .rights-card {
+                position: static;
+                transform: none;
+                max-width: 90%;
+                width: 100%;
+                margin: 0 auto;
+                padding: 15px 20px;
+            }
+
+            .rights-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .rights-card p {
+                font-size: 0.9rem;
+            }
+
+            .rights-content::before {
+                position: static;
+                width: 100%;
+                height: auto;
+                opacity: 1;
+            }
+        }
+
+        .services {
+            padding: 100px 20px;
+            background-color: #e8e8e8;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            flex: 1 1 280px;
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            scale: 1.05;
+        }
+
+        .service-item::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #ff4500;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover::after {
+            height: 6px;
+        }
+
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .service-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-item p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                max-width: 90%;
+                width: 100%;
+            }
+
+            .service-item:hover {
+                transform: translateY(-5px);
+                scale: 1.02;
+            }
+        }
+
+        .testimonials {
+            padding: 40px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .testimonial-categories {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .category-btn {
+            padding: 8px 16px;
+            background: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        .category-btn:not(.active) {
+            background: #fff;
+            color: #ff4500;
+            border: 1px solid #ff4500;
+        }
+
+        .category-btn:hover {
+            background: #e63d00;
+        }
+
+        .category-btn:not(.active):hover {
+            background: #fff;
+            color: #e63d00;
+            border-color: #e63d00;
+        }
+
+        .testimonial-item {
+            max-width: 1000px;
+            text-align: left;
+            padding: 20px;
+            background: #fff;
+            display: none;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-item.active {
+            display: block;
+        }
+
+        .testimonial-display {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .testimonial-item.active {
+            display: block;
+        }
+
+        .client-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .stars {
+            margin: 5px 0;
+            color: #ffc400;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            clear: both;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '“';
+            font-size: 1.2rem;
+            color: #ff4500;
+        }
+
+        .testimonial-text::after {
+            content: '”';
+        }
+
+        .client-name {
+            font-weight: bold;
+            color: #ff4500;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .testimonial-display {
+                padding: 10px 0;
+            }
+
+            .testimonial-item {
+                max-width: 90%;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .client-photo {
+                float: none;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .testimonial-text {
+                clear: none;
+            }
+        }
+
+        .contact {
+            padding: 40px 20px;
+            text-align: left;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .map-section {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-container {
+            flex: 1;
+            max-width: 50%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .contact-left,
+        .contact-right {
+            flex: 1;
+        }
+
+        .contact-left p,
+        .contact-right p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .contact-left strong,
+        .contact-right strong {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-left a,
+        .contact-right span {
+            color: #ff4500;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 100%;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #a2a2a2;
+            border-radius: 3px;
+            width: 100%;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form button:hover {
+            background: #e63d00;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .map-section,
+            .contact-form-container {
+                max-width: 100%;
+            }
+
+            .contact-form {
+                max-width: 100%;
+            }
+        }
+
+        footer {
+            background: #fff;
+            color: #333;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-left {
+            flex: 1;
+            text-align: left;
+        }
+
+        .footer-left p {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .footer-nav a {
+            color: #333;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-nav a:hover {
+            color: #ff4500;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            justify-content: flex-start;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .footer-bottom p {
+            font-size: 0.7rem;
+        }
+
+        .footer-bottom a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-left,
+            .footer-right {
+                text-align: center;
+                width: 100%;
+            }
+
+            .footer-nav {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .footer-bottom {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+
+            .services-list {
+                flex-direction: column;
+            }
+        }
+        .case-section {
+            padding: -30px 5px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .case-section h2 {
+            font-size: 2.5em;
+            color: #333;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .case-section p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 20px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">HIRE YOUR LAWYER</div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#about" id="about-link">About</a>
+                <a href="#services" id="services-link">Services</a>
+                <a href="#testimonials" id="testimonials-link">Testimonials</a>
+                <a href="#contact" id="contact-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-card">
+                <section class="case-section">
+                    <h2>Understand Your Case</h2>
+                    <p>We help you make sense of your legal situation. Learn more about your rights, explore your options, and take
+                        the next step with confidence. When you’re ready, talk to a lawyer through our chatbot for personalized
+                        advice.</p>
+                    <a href="index1.html" class="btn">Chat with AI Lawyer</a>
+                </section>
+                <!-- <h1>HIRE YOUR LAWYER</h1> -->
+                <!-- <p>Navigating Your Legal Journey with Confidence</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-card">
+                    <h2 class="section-title"><a href="aboutus.html" style="color: inherit; text-decoration: none;">About Us</a></h2>
+                    <p>
+                        At HIRE YOUR LAWYER, we are dedicated to providing exceptional legal services tailored to your
+                        unique needs. Based in Vadodara, our team of experienced lawyers specializes in various fields
+                        of
+                        law, ensuring that we can handle your case with expertise and precision. Trust us to navigate
+                        the
+                        complexities of the legal system while you focus on what matters most – your life and peace of
+                        mind.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="rights" id="rights">
+            <div class="container">
+                <div class="rights-content">
+                    <div class="rights-card"></div>
+                    <div class="rights-card">
+                        <h2 class="section-title"><a href="Protectyour rights.html" style="color: inherit; text-decoration: none;">Protect Your Rights</a></h2>
+                        <p>Expertise and Dedication in Every Case</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="height: 50px;"></div> <!-- Added space between image and video -->
+        <section class="services" id="services">
+            <div class="video-background">
+                <video autoplay muted loop id="bg-video">
+                    <source src="handshake.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        <div class="container">
+            <h2 class="section-title1" >SERVICES</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <a href="services/HACKATHON/courtapperence.html">
+                        <img src="courts.jpg" alt="Court Appearances Icon" class="service-icon" />
+                        <h3>Court Appearances</h3>
+                        <p>Professional representation and support during all court proceedings to advocate for your best
+                            interests.</p>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="services/HACKATHON/evidencegathering.html">
+                        <img src="hand.jpg" alt="Evidence Gathering Icon" class="service-icon" />
+                        <h3>Evidence Gathering</h3>
+                        <p>Expert collection and analysis of evidence to build a strong foundation for your legal case.</p>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="Case Management/index.html">
+                        <img src="case.jpg" alt="Case Management Icon" class="service-icon" />
+                        <h3>Case Management</h3>
+                        <p>Comprehensive oversight and organization of all legal case details to ensure accuracy and
+                            efficiency.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .services {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">TESTIMONIALS</h2>
+
+            <div class="testimonial-categories">
+                <button class="category-btn active" onclick="showTestimonial('all')">All</button>
+                <button class="category-btn" onclick="showTestimonial('family')">Family Law</button>
+                <button class="category-btn" onclick="showTestimonial('civil')">Civil Law</button>
+            </div>
+
+            <div class="testimonial-display">
+                <div class="testimonial-item" id="testimonial-1" data-category="all">
+                    <img src="testimonial1.jpg" alt="John Doe" class="client-photo" />
+                    <div class="stars">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">“Their meticulous attention to detail and expertise gave me the
+                        confidence I
+                        needed throughout my legal process.”</p>
+                    <p class="client-name">John Doe - Satisfied Client</p>
+                </div>
+                <div class="testimonial-item" id="testimonial-2" data-category="family">
+                    <img src="testimonial2.jpg" alt="Reva Patel" class="client-photo" />
+                    <div class="stars">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">“Their dedication and knowledge were evident. They helped me navigate
+                        through a tough legal challenge with ease.”</p>
+                    <p class="client-name">Reva Patel - Relieved Client</p>
+                </div>
+                <div class="testimonial-item" id="testimonial-3" data-category="civil">
+                    <img src="testimonial3.jpg" alt="Tanishq Sharma" class="client-photo" />
+                    <div class="stars">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">“I felt completely supported from start to finish. The team made
+                        everything
+                        so clear and manageable.”</p>
+                    <p class="client-name">Tanishq Sharma - Grateful Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Consult Now!</h2>
+            <div class="contact-content">
+                <div class="map-section">
+                    <img src="india-map-2019.jpg" alt="Map of India" class="map-image">
+                </div>
+                <div class="contact-form-container">
+                    <img src="firmimage.jpg" alt="Contact Us" style="width: 100%; height: auto; margin-bottom: 20px;">
+                    <form class="contact-form" action="Appoinment and payment gateway/appointment.html" method="get">
+                        <button type="submit">Book An Appointment</button>
+                    </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>HIRE YOUR LAWYER</p>
+            </div>
+            <div class="footer-right">
+                <nav>
+                    <a href="#hero" id="home-link1">Home</a>
+                    <a href="#about" id="about-link">About</a>
+                    <a href="#services" id="services-link">Services</a>
+                    <a href="#testimonials" id="testimonials-link">Testimonials</a>
+                    <a href="#contact" id="contact-link">Contact</a>
+                </nav>
+                <button style="background-color: blue; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: transform 0.3s;">
+                    <a href="pdf generator by using user details/index.html" class="animated-button" style="color: white; font-size: 1.2rem; text-decoration: none;">Report an FIR</a>
+                </button>
+                <style>
+                    .animated-button:hover {
+                        transform: scale(1.1);
+                    }
+                </style>
+            </div>
+            <div class="footer-bottom">
+                <br>Copyright © 2025 All rights reserved </br> Details by<a href="repealedfileopen.pdf"
+                    style="color: #ff4500;">
+                    Indian Government</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showTestimonial(category) {
+            const testimonials = document.querySelectorAll('.testimonial-item');
+            const buttons = document.querySelectorAll('.category-btn');
+            const testimonialDisplay = document.querySelector('.testimonial-display');
+
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+
+            if (category === 'all') {
+                document.getElementById('testimonial-1').classList.add('active');
+            } else if (category === 'family') {
+                document.getElementById('testimonial-2').classList.add('active');
+            } else if (category === 'civil') {
+                document.getElementById('testimonial-3').classList.add('active');
+            }
+
+            testimonialDisplay.classList.add('active');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.category-btn[onclick="showTestimonial('${category}')"]`).classList.add('active');
+        }
+
+        window.onload = function () {
+            const testimonials = document.querySelectorAll('.testimonial-item');
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            document.getElementById('testimonial-1').classList.add('active');
+            document.querySelector('.testimonial-display').classList.add('active');
+        };
+    </script>
+  <script>
+    document.getElementById('home-link1').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#hero').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('about-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#about').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('services-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#services').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('testimonials-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#testimonials').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    document.getElementById('contact-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#contact').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+
+</html>
